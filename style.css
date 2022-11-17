@@ -33,6 +33,7 @@ body {
   background: linear-gradient(to right, #0061ff, #529f33);
   height: 100vh;
 }
+
 .big-heading {
   color: white;
   font-weight: 700;
@@ -50,6 +51,6 @@ body {
   border: 4px solid #494949;
 }
 
-.start-btn:hover{
-    background-color:orange;
+.start-btn:hover {
+  background-color: orange;
 }
