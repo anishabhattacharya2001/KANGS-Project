@@ -19,12 +19,25 @@ camera_button.addEventListener("click", async function () {
   }
 
   video.srcObject = camera_stream;
-  camera_button.style.display = "none";
+  camera_button.style.display="block";
   video.style.display = "block";
   start_button.style.display = "block";
 });
 
 start_button.addEventListener("click", function () {
+    try {
+        camera_stream = await navigator.mediaDevices.getUserMedia({
+          video: true,
+          audio: true,
+        });
+      } catch (error) {
+        alert(error.message);
+        return;
+      }
+    
+      video.srcObject = camera_stream;
+      video.style.display = "block";
+      start_button.style.display = "block";
   media_recorder = new MediaRecorder(camera_stream, { mimeType: "video/webm" });
   start_button.style.display = "none";
 
