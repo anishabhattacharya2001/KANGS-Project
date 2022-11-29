@@ -11,7 +11,7 @@ function show(divId) {
   $("#" + divId).show();
 }
 
-async function startClicked(){
+camera_button.addEventListener("click", async function () {
   show("control-div");
   //document.getElementById("control-div").style.display = "block";
   console.log("button should disappear");
@@ -29,27 +29,7 @@ async function startClicked(){
   // camera_button.style.display = "block";
   video.style.display = "block";
   start_button.style.display = "block";
-
-}
-// camera_button.addEventListener("click", async function () {
-//   show("control-div");
-//   //document.getElementById("control-div").style.display = "block";
-//   console.log("button should disappear");
-//   try {
-//     camera_stream = await navigator.mediaDevices.getUserMedia({
-//       video: true,
-//       audio: true,
-//     });
-//   } catch (error) {
-//     alert(error.message);
-//     return;
-//   }
-//   camera_button.style.display = "none";
-//   video.srcObject = camera_stream;
-//   // camera_button.style.display = "block";
-//   video.style.display = "block";
-//   start_button.style.display = "block";
-// });
+});
 
 start_button.addEventListener("click", function () {
   media_recorder = new MediaRecorder(camera_stream, { mimeType: "video/webm" });
