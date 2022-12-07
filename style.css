@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -24,7 +29,7 @@
 
 #intro {
   text-align: center;
-  /*padding-top: 8%;*/
+  padding-top: 8%;
   background: linear-gradient(to right, #0061ff, #529f33);
   height: 100vh;
 }
@@ -37,19 +42,12 @@
 .task-heading {
   font-weight: 700;
   text-align: center;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .video-element {
   margin: auto;
   width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-  /* padding: 10px; */
-}
-.control-div {
-  /* display: none; */
+  padding: 10px;
 }
 
 .start-btn {
@@ -62,9 +60,6 @@
   font-size: 26px;
   text-align: center;
   border: 4px solid #494949;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .start-btn:hover {
