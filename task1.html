@@ -1,24 +1,40 @@
 <!DOCTYPE html>
   <head>
     <title>record task</title>
-    <link rel="stylesheet" href="style.css" />
+      <meta charset="utf-8">
+      <!-- <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script> -->
+      <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="hand.css" />
     <link rel="shortcut icon" href="#" />
   </head>
   <body>
     <h1 class="task-heading">
-      Task1: Finger Tapping <br />
-      Use your fingers and start tapping<br />
+      Task 1: Finger Tapping <br />
+      Use your fingers and start tapping.<br />
+      Make sure your hand is in frame.<br />
     </h1>
     <br />
-    <div class="video-element">
-      <button id="start-camera" class="start-btn">Start Camera</button>
-      <video id="video" width="640" height="480" autoplay muted></video>
-      <button id="start-record">Start Recording</button>
-      <button id="stop-record">Stop Recording</button>
+    <div id="liveView" class="videoView">
+      <button id="webcamButton" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">ENABLE WEBCAM</span>
+      </button>
+      <div style="position: relative;">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas class="output_canvas" id="output_canvas" width="1280" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
+      </div>
     </div>
     <a href="taskFailed.html"><button id="task-failed"></button></a>
     
 
-    <script src="parktest.js"></script>
+    <script type="module" src="hand.js"></script>
   </body>
 </html>

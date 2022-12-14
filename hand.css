@@ -1,0 +1,28 @@
+.videoView {
+    position: absolute;
+    float: left;
+    width: 48%;
+    margin: 2% 1%;
+    cursor: pointer;
+    min-height: 500px;
+  }
+
+  .videoView p,
+.detectOnClick p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #007f8b;
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.7);
+  z-index: 2;
+  margin: 0;
+}
+.output_canvas {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+  }
+
+h1{
+  text-align: center;
+}
